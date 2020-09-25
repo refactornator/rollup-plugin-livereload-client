@@ -1,0 +1,48 @@
+{
+  "name": "rollup-plugin-livereload-client",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Add the LiveReload client for use during development",
+  "license": "MIT",
+  "repository": "wlindner/rollup-plugin-livereload-client",
+  "author": "William Lindner <wlindner522@gmail.com>",
+  "homepage": "https://github.com/wlindner/rollup-plugin-livereload-client",
+  "bugs": "https://github.com/wlindner/rollup-plugin-livereload-client/issues",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "lint": "prettier -l .",
+    "fix": "prettier --write .",
+    "test": "ava",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "livereload",
+    "lr",
+    "frontend"
+  ],
+  "dependencies": {
+    "livereload-js": "^3.3.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-html": "^0.2.0",
+    "ava": "^3.12.1",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.2"
+  }
+}
