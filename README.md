@@ -24,7 +24,7 @@ export default {
   output: {
     dir: "build",
   },
-  plugins: [html(), development && livereload()],
+  plugins: [html(), development && livereloadClient()],
 };
 ```
 
