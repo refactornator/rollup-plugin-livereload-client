@@ -24,13 +24,20 @@ export default {
   output: {
     dir: "build",
   },
-  plugins: [html(), development && livereloadClient()],
+  plugins: [html(), livereloadClient({ include: development })],
 };
 ```
 
 `index.html` will be modified to include a script tag to load `livereload.js`. Which will also be copied into the `build` directory.
 
 ## Options
+
+### `include`
+
+Type: `Boolean`<br>
+Default: `true`
+
+Specifies whether to include the client. When `true`, `livereload.js` is copied into the `output.dir` and a `<script>` tag to load `livereload.js` is injected into `index.html`. Set to `false` in production so `livereload` is not included in the build.
 
 ### `port`
 
